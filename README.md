@@ -19,6 +19,13 @@ https://stackoverflow.com/questions/43574426/java-how-to-resolve-java-lang-nocla
 
 Use intellij to open the build.gradle file and project will be created. In there, you can use Build panel to build and go to test package of the project to run test class.
 
+# client and server side validation rule
+
+I am validating if both start_date and end_date is null. Plus the date input type itself do the format check.
+If start_date is empty and end_date is not empty, I will search from 1900-01-01 to end_date.
+If start_date is not empty and end_date is empty, I will search from start_date to 2100-01-01.
+The start_date is inclusive, the end_date is exclusive in terms of search time span.
+
 # notes:
 
 You will find I have to use a temp table in schema.sql. That is because there is an inconsistency when CSVREAD function get called across mac and windows system.
