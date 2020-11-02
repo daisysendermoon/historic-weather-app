@@ -58,7 +58,11 @@ public class HistoricWeatherController {
     public String detailPage(Map<String, Object> model,
         @PathVariable Long id) {
         logger.info("Entering into detail page handler");
-        model.put("weatherdetail", historicWeatherDao.findById(id).orElse(null));
+        HistoricWeather historicWeather = historicWeatherDao.findById(id).orElse(null);
+        if (historicWeather != null) {
+            this.formatDate(historicWeather);
+        }
+        model.put("weatherdetail", historicWeather);
         return "detail";
     }
 
