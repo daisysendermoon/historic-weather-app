@@ -6,7 +6,7 @@ http://localhost:8080/historic-weather/home
 
 This is a Springboot application with a H2 in memory DB initialized every time you start the application.
 
-# run application on UNIX:
+# run application on LINUX/MAC:
 
 To run application please go to your checked out project directory, and run
 
