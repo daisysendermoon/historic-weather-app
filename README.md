@@ -10,7 +10,7 @@ To run application please go to your checked out project directory, and run
 
 ./gradlew bootRun
 
-A more staightforward way to run the application is that from any linux/mac, you can run:
+A more staightforward way to run the application is that from any linux/mac, on any terminal, you can run:
 
 java -jar historic-weather-0.0.1-SNAPSHOT.jar
 
