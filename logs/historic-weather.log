@@ -1996,3 +1996,39 @@ Verify the connector's configuration, identify and stop any process that's liste
 2020-11-01 20:26:15,946 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-4] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-11-01 20:26:15,947 INFO com.zaxxer.hikari.HikariDataSource [Thread-4] HikariPool-1 - Shutdown initiated...
 2020-11-01 20:26:15,951 INFO com.zaxxer.hikari.HikariDataSource [Thread-4] HikariPool-1 - Shutdown completed.
+2020-11-01 21:19:11,098 INFO org.springframework.boot.StartupInfoLogger [Test worker] Starting HistoricWeatherApplicationTests on cgiadmins-MacBook-Pro.local with PID 46238 (started by richardliu in /Users/richardliu/github/again/historic-weather-app)
+2020-11-01 21:19:11,101 DEBUG org.springframework.boot.StartupInfoLogger [Test worker] Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2020-11-01 21:19:11,104 INFO org.springframework.boot.SpringApplication [Test worker] No active profile set, falling back to default profiles: default
+2020-11-01 21:19:11,139 INFO org.springframework.context.support.AbstractApplicationContext [Test worker] Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2f39575a: startup date [Sun Nov 01 21:19:11 EST 2020]; root of context hierarchy
+2020-11-01 21:19:12,208 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [Test worker] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1de0c559] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-01 21:19:12,329 INFO com.zaxxer.hikari.HikariDataSource [Test worker] HikariPool-1 - Starting...
+2020-11-01 21:19:12,601 INFO com.zaxxer.hikari.HikariDataSource [Test worker] HikariPool-1 - Start completed.
+2020-11-01 21:19:12,619 INFO org.springframework.jdbc.datasource.init.ScriptUtils [Test worker] Executing SQL script from URL [file:/Users/richardliu/github/again/historic-weather-app/build/resources/main/schema.sql]
+2020-11-01 21:19:12,842 INFO org.springframework.jdbc.datasource.init.ScriptUtils [Test worker] Executed SQL script from URL [file:/Users/richardliu/github/again/historic-weather-app/build/resources/main/schema.sql] in 222 ms.
+2020-11-01 21:19:12,984 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Test worker] Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-11-01 21:19:13,011 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-01 21:19:13,097 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate Core {5.2.17.Final}
+2020-11-01 21:19:13,099 INFO org.hibernate.cfg.Environment [Test worker] HHH000206: hibernate.properties not found
+2020-11-01 21:19:13,138 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [Test worker] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-11-01 21:19:13,263 INFO org.hibernate.dialect.Dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-01 21:19:13,821 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-01 21:19:14,167 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [Test worker] HHH000397: Using ASTQueryTranslatorFactory
+2020-11-01 21:19:14,596 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [Test worker] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-01 21:19:14,925 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [Test worker] Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@2f39575a: startup date [Sun Nov 01 21:19:11 EST 2020]; root of context hierarchy
+2020-11-01 21:19:14,976 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-01 21:19:15,019 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [Test worker] Mapped "{[/historic-weather/search],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> ca.weather.historic.service.web.controllers.HistoricWeatherController.search(ca.weather.historic.service.model.SearchCriteria,org.springframework.validation.Errors) throws java.text.ParseException
+2020-11-01 21:19:15,021 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [Test worker] Mapped "{[/historic-weather/home]}" onto public java.lang.String ca.weather.historic.service.web.controllers.HistoricWeatherController.basedPage(java.util.Map<java.lang.String, java.lang.Object>)
+2020-11-01 21:19:15,022 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [Test worker] Mapped "{[/historic-weather/detail/{id}],methods=[GET]}" onto public java.lang.String ca.weather.historic.service.web.controllers.HistoricWeatherController.detailPage(java.util.Map<java.lang.String, java.lang.Object>,java.lang.Long)
+2020-11-01 21:19:15,025 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [Test worker] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-11-01 21:19:15,026 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [Test worker] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-11-01 21:19:15,062 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [Test worker] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-01 21:19:15,062 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [Test worker] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-01 21:19:15,439 INFO org.springframework.boot.StartupInfoLogger [Test worker] Started HistoricWeatherApplicationTests in 4.873 seconds (JVM running for 6.236)
+2020-11-01 21:19:15,654 INFO ca.weather.historic.service.web.controllers.HistoricWeatherController [Test worker] Entering into search handler
+2020-11-01 21:19:15,659 INFO ca.weather.historic.service.web.controllers.HistoricWeatherController [Test worker] retrieved number of records :1
+2020-11-01 21:19:15,679 INFO org.springframework.context.support.AbstractApplicationContext [Thread-6] Closing org.springframework.web.context.support.GenericWebApplicationContext@2f39575a: startup date [Sun Nov 01 21:19:11 EST 2020]; root of context hierarchy
+2020-11-01 21:19:15,684 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-6] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-01 21:19:15,686 INFO com.zaxxer.hikari.HikariDataSource [Thread-6] HikariPool-1 - Shutdown initiated...
+2020-11-01 21:19:15,688 INFO com.zaxxer.hikari.HikariDataSource [Thread-6] HikariPool-1 - Shutdown completed.
