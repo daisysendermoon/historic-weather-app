@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<STYLE>A {text-decoration: none;} </STYLE>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <link rel="stylesheet" href="/css/base.css">
+</head>
+<body>
+<div><h3>Historic Weather Detail</h3></div>
+<table id="detailTable">
+  <thead>
+  <tr>
+    <th>Station Name</th>
+    <th>Province</th>
+    <th>Date</th>
+    <th>Mean Temperature</th>
+    <th>Highest Monthly Max Temperature</th>
+    <th>Lowest Monthly Min Temperature</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td th:text="${weatherdetail.stationName}">?</td>
+    <td th:text="${weatherdetail.province}">?</td>
+    <td th:text="${weatherdetail.recordDateString}">?</td>
+    <td th:text="${weatherdetail.meanTemp}">?</td>
+    <td th:text="${weatherdetail.maxTempMonthlyTemp}">?</td>
+    <td th:text="${weatherdetail.minTempMonthlyTemp}">?</td>
+  </tr>
+  </tbody>
+</table>
+<div><a href="/historic-weather/home">Home</a></div>
+</body>
+</html>

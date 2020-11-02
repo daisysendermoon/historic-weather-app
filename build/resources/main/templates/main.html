@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<STYLE>A {text-decoration: none;} </STYLE>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf8"
+          src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+  <script>
+
+    jQuery(document).ready(function($) {
+     	  $('#weatherTable').DataTable({searching: false});
+
+        $("#seachForm").submit(function(event){
+            var search = {}
+            search["start"] = $("#start").val();
+            search["end"] = $("#end").val();
+
+            if(validate()){
+                console.log("validation successful");
+                $.ajax({
+                   type: "POST",
+                   contentType: "application/json",
+                   url: "/historic-weather/search",
+                   dataType:"json",
+                   data: JSON.stringify(search),
+                   cache: false,
+                   timeout: 20000,
+                   success:function(data){
+                       $('#weatherTable').dataTable().fnDestroy();
+                       $("#weatherTable tbody").empty();
+                       $.each(data["searchResult"],function(i,value){
+                    	   $("#weatherTable tbody:last-child").append("<tr class='clickable-row' data-href='detail/"
+                    			   + value.id + "'><td>" + value.stationName + "</td><td>"
+                    			   + value.recordDateString + "</td><td><a href = 'detail/" + value.id + "'>"
+                    			   + value.meanTemp + "</a></td></tr>");
+                       });
+                       $('#weatherTable').DataTable({searching: false});
+                       $("#error").empty();
+                   },
+                   error: function (e) {
+                	   $("#error").append("Service unavailable, please contact administrators.");
+                   }
+                });
+	    	}
+	    	event.preventDefault();
+	    });
+
+    });
+
+
+    function validate(){
+        $("#error").empty();
+        var start = $("#start").val();
+        var end = $("#end").val();
+        if ((start == null || start == "") && (end == null || end == "")) {
+          $("#error").append("Please fill in required search criteria.");
+          return false;
+        }
+        return true;
+    }
+
+  </script>
+</head>
+<body>
+<h3>Historic Weather</h3>
+<div>
+
+  <form id="seachForm">
+    <label for="start">Start Date: </label>
+    <input type="date" id="start" name="start"/>
+    <span>&nbsp</span>
+    <label for="end">End Date: </label>
+    <input type="date" id="end" name="end"/>
+    <input type="submit" value="search"/>
+  </form>
+  <div id="error"></div>
+  <table id="weatherTable">
+    <thead>
+    <tr>
+      <th>Station Name</th>
+      <th>Date</th>
+      <th>Mean Temperature</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="weather,iterStat: ${weatherinfo}">
+      <td th:text="${weather.stationName}">?</td>
+      <td th:text="${weather.recordDateString}">?</td>
+      <td><a th:href="'detail/' + ${weather.id}" th:text="${weather.meanTemp}">?</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

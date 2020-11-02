@@ -1,0 +1,123 @@
+2020-11-01 17:41:52,621 INFO org.springframework.boot.StartupInfoLogger [main] Starting HistoricWeatherApplication on cgiadmins-MacBook-Pro.local with PID 42683 (/Users/richardliu/gitlab/historic-weather/build/classes/java/main started by richardliu in /Users/richardliu/gitlab/historic-weather)
+2020-11-01 17:41:52,627 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-11-01 17:41:52,678 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@65466a6a: startup date [Sun Nov 01 17:41:52 EST 2020]; root of context hierarchy
+2020-11-01 17:41:54,104 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6e574a57] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-01 17:41:54,676 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-11-01 17:41:54,699 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-01 17:41:54,710 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-11-01 17:41:54,710 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2020-11-01 17:41:54,726 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/richardliu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-11-01 17:41:54,841 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2020-11-01 17:41:54,842 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2164 ms
+2020-11-01 17:41:54,906 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2020-11-01 17:41:54,910 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-11-01 17:41:54,911 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-11-01 17:41:54,911 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-11-01 17:41:54,911 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2020-11-01 17:41:55,080 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-11-01 17:41:55,596 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-11-01 17:41:55,617 INFO org.springframework.jdbc.datasource.init.ScriptUtils [main] Executing SQL script from URL [file:/Users/richardliu/gitlab/historic-weather/build/resources/main/schema.sql]
+2020-11-01 17:41:55,900 INFO org.springframework.jdbc.datasource.init.ScriptUtils [main] Executed SQL script from URL [file:/Users/richardliu/gitlab/historic-weather/build/resources/main/schema.sql] in 282 ms.
+2020-11-01 17:41:56,072 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-11-01 17:41:56,103 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-01 17:41:56,290 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.2.17.Final}
+2020-11-01 17:41:56,291 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2020-11-01 17:41:56,354 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-11-01 17:41:56,548 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-01 17:41:57,315 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-01 17:41:57,682 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2020-11-01 17:41:57,936 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-01 17:41:58,249 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@65466a6a: startup date [Sun Nov 01 17:41:52 EST 2020]; root of context hierarchy
+2020-11-01 17:41:58,313 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-01 17:41:58,373 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historic-weather/search],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> ca.weather.historic.service.web.controllers.HistoricWeatherController.search(ca.weather.historic.service.model.SearchCriteria,org.springframework.validation.Errors) throws java.text.ParseException
+2020-11-01 17:41:58,375 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historic-weather/home]}" onto public java.lang.String ca.weather.historic.service.web.controllers.HistoricWeatherController.basedPage(java.util.Map<java.lang.String, java.lang.Object>)
+2020-11-01 17:41:58,376 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historic-weather/detail/{id}],methods=[GET]}" onto public java.lang.String ca.weather.historic.service.web.controllers.HistoricWeatherController.detailPage(java.util.Map<java.lang.String, java.lang.Object>,java.lang.Long)
+2020-11-01 17:41:58,383 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-11-01 17:41:58,385 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-11-01 17:41:58,420 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-01 17:41:58,420 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-01 17:41:59,090 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2020-11-01 17:41:59,092 INFO org.springframework.jmx.export.MBeanExporter [main] Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-11-01 17:41:59,097 INFO org.springframework.jmx.export.MBeanExporter [main] Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2020-11-01 17:41:59,114 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-11-01 17:41:59,141 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2020-11-01 17:41:59,160 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-01 17:41:59,164 INFO org.springframework.boot.StartupInfoLogger [main] Started HistoricWeatherApplication in 7.242 seconds (JVM running for 7.736)
+2020-11-01 17:42:17,005 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-11-01 17:42:17,006 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2020-11-01 17:42:17,033 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2020-11-01 17:42:17,082 INFO ca.weather.historic.service.web.controllers.HistoricWeatherController [http-nio-8080-exec-1] Entering into home page handler
+2020-11-01 17:42:33,799 INFO ca.weather.historic.service.web.controllers.HistoricWeatherController [http-nio-8080-exec-4] Entering into search handler
+2020-11-01 17:42:33,834 INFO ca.weather.historic.service.web.controllers.HistoricWeatherController [http-nio-8080-exec-4] retrieved number of records :421
+2020-11-01 17:42:43,745 INFO ca.weather.historic.service.web.controllers.HistoricWeatherController [http-nio-8080-exec-5] Entering into detail page handler
+2020-11-01 17:42:45,703 INFO ca.weather.historic.service.web.controllers.HistoricWeatherController [http-nio-8080-exec-7] Entering into home page handler
+2020-11-01 17:46:43,233 INFO org.springframework.context.support.AbstractApplicationContext [Thread-4] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@65466a6a: startup date [Sun Nov 01 17:41:52 EST 2020]; root of context hierarchy
+2020-11-01 17:46:43,236 INFO org.springframework.jmx.export.MBeanExporter [Thread-4] Unregistering JMX-exposed beans on shutdown
+2020-11-01 17:46:43,237 INFO org.springframework.jmx.support.MBeanRegistrationSupport [Thread-4] Unregistering JMX-exposed beans
+2020-11-01 17:46:43,240 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-4] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-01 17:46:43,241 INFO com.zaxxer.hikari.HikariDataSource [Thread-4] HikariPool-1 - Shutdown initiated...
+2020-11-01 17:46:43,246 INFO com.zaxxer.hikari.HikariDataSource [Thread-4] HikariPool-1 - Shutdown completed.
+2020-11-01 19:15:09,352 INFO org.springframework.boot.StartupInfoLogger [main] Starting HistoricWeatherApplication on cgiadmins-MacBook-Pro.local with PID 44339 (/Users/richardliu/github/historic-weather-app/build/classes/java/main started by richardliu in /Users/richardliu/github/historic-weather-app)
+2020-11-01 19:15:09,357 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2020-11-01 19:15:09,360 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-11-01 19:15:09,419 INFO org.springframework.context.support.AbstractApplicationContext [main] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7f010382: startup date [Sun Nov 01 19:15:09 EST 2020]; root of context hierarchy
+2020-11-01 19:15:10,950 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ceb0ee4a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-01 19:15:11,600 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-11-01 19:15:11,623 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-01 19:15:11,635 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-11-01 19:15:11,636 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2020-11-01 19:15:11,649 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/richardliu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-11-01 19:15:11,794 INFO org.apache.juli.logging.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2020-11-01 19:15:11,795 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 2377 ms
+2020-11-01 19:15:11,872 INFO org.springframework.boot.web.servlet.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2020-11-01 19:15:11,881 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-11-01 19:15:11,883 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-11-01 19:15:11,884 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-11-01 19:15:11,884 INFO org.springframework.boot.web.servlet.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2020-11-01 19:15:12,097 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-11-01 19:15:12,578 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-11-01 19:15:12,595 INFO org.springframework.jdbc.datasource.init.ScriptUtils [main] Executing SQL script from URL [file:/Users/richardliu/github/historic-weather-app/build/resources/main/schema.sql]
+2020-11-01 19:15:12,835 INFO org.springframework.jdbc.datasource.init.ScriptUtils [main] Executed SQL script from URL [file:/Users/richardliu/github/historic-weather-app/build/resources/main/schema.sql] in 240 ms.
+2020-11-01 19:15:12,998 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-11-01 19:15:13,029 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-01 19:15:13,161 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.2.17.Final}
+2020-11-01 19:15:13,163 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2020-11-01 19:15:13,247 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-11-01 19:15:13,422 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-01 19:15:14,134 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-01 19:15:14,531 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2020-11-01 19:15:14,780 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-01 19:15:15,058 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7f010382: startup date [Sun Nov 01 19:15:09 EST 2020]; root of context hierarchy
+2020-11-01 19:15:15,118 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-01 19:15:15,162 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historic-weather/search],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> ca.weather.historic.service.web.controllers.HistoricWeatherController.search(ca.weather.historic.service.model.SearchCriteria,org.springframework.validation.Errors) throws java.text.ParseException
+2020-11-01 19:15:15,163 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historic-weather/home]}" onto public java.lang.String ca.weather.historic.service.web.controllers.HistoricWeatherController.basedPage(java.util.Map<java.lang.String, java.lang.Object>)
+2020-11-01 19:15:15,163 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/historic-weather/detail/{id}],methods=[GET]}" onto public java.lang.String ca.weather.historic.service.web.controllers.HistoricWeatherController.detailPage(java.util.Map<java.lang.String, java.lang.Object>,java.lang.Long)
+2020-11-01 19:15:15,166 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-11-01 19:15:15,168 INFO org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-11-01 19:15:15,208 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-01 19:15:15,208 INFO org.springframework.web.servlet.handler.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-01 19:15:15,682 INFO org.springframework.jmx.export.MBeanExporter [main] Registering beans for JMX exposure on startup
+2020-11-01 19:15:15,684 INFO org.springframework.jmx.export.MBeanExporter [main] Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-11-01 19:15:15,690 INFO org.springframework.jmx.export.MBeanExporter [main] Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2020-11-01 19:15:15,705 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-11-01 19:15:15,743 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2020-11-01 19:15:15,760 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-01 19:15:15,767 INFO org.springframework.boot.StartupInfoLogger [main] Started HistoricWeatherApplication in 7.122 seconds (JVM running for 7.65)
+2020-11-01 19:15:30,199 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-11-01 19:15:30,199 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization started
+2020-11-01 19:15:30,222 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2020-11-01 19:15:30,280 INFO ca.weather.historic.service.web.controllers.HistoricWeatherController [http-nio-8080-exec-1] Entering into home page handler
+2020-11-01 19:15:39,871 INFO ca.weather.historic.service.web.controllers.HistoricWeatherController [http-nio-8080-exec-3] Entering into detail page handler
+2020-11-01 19:15:41,694 INFO ca.weather.historic.service.web.controllers.HistoricWeatherController [http-nio-8080-exec-5] Entering into home page handler
+2020-11-01 19:16:01,234 INFO ca.weather.historic.service.web.controllers.HistoricWeatherController [http-nio-8080-exec-6] Entering into search handler
+2020-11-01 19:16:01,254 INFO ca.weather.historic.service.web.controllers.HistoricWeatherController [http-nio-8080-exec-6] retrieved number of records :58
+2020-11-01 19:16:18,901 INFO org.springframework.context.support.AbstractApplicationContext [Thread-4] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7f010382: startup date [Sun Nov 01 19:15:09 EST 2020]; root of context hierarchy
+2020-11-01 19:16:18,905 INFO org.springframework.jmx.export.MBeanExporter [Thread-4] Unregistering JMX-exposed beans on shutdown
+2020-11-01 19:16:18,908 INFO org.springframework.jmx.support.MBeanRegistrationSupport [Thread-4] Unregistering JMX-exposed beans
+2020-11-01 19:16:18,911 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-4] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-01 19:16:18,913 INFO com.zaxxer.hikari.HikariDataSource [Thread-4] HikariPool-1 - Shutdown initiated...
+2020-11-01 19:16:18,917 INFO com.zaxxer.hikari.HikariDataSource [Thread-4] HikariPool-1 - Shutdown completed.
