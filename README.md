@@ -6,7 +6,7 @@ http://localhost:8080/historic-weather/home
 
 This is a Springboot application with a H2 in memory DB initialized every time you start the application.
 
-# RUN APPLICATION ON UNIX:
+# run application on UNIX:
 
 To run application please go to your checked out project directory, and run
 
@@ -16,7 +16,7 @@ A more staightforward way to run the application is that from any linux/mac, on 
 
 java -jar historic-weather-0.0.1-SNAPSHOT.jar
 
-# RUN APPLICATION ON WINDOWS 10:
+# run application on WINDOWS 10:
 
 I do not have a windows machine, so I cannot say this will work for windows or not.
 
