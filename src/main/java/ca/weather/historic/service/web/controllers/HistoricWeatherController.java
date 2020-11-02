@@ -36,7 +36,7 @@ public class HistoricWeatherController {
     private HistoricWeatherDao historicWeatherDao;
 
 
-    @RequestMapping("/home")
+    @RequestMapping(value = { "/home","/" })
     public String basedPage(Map<String, Object> model) {
         logger.info("Entering into home page handler");
         List<HistoricWeather> weatherList = historicWeatherDao.findAll();
